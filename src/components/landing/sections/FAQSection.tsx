@@ -1,23 +1,23 @@
 const faqs = [
   [
-    'Minha empresa e obrigada a implementar a NR-01?',
-    'Sim. O mapeamento de riscos psicossociais ja e obrigatorio para todas as empresas. Desprotegidas estao sujeitas a autuacao, multas e passivos trabalhistas.',
+    'Minha empresa é obrigada a implementar a NR-01?',
+    'Sim. O mapeamento de riscos psicossociais já é obrigatório para todas as empresas. Desprotegidas estão sujeitas a autuação, multas e passivos trabalhistas.',
   ],
   [
-    'O que e o COPSOQ e por que e importante?',
-    'O COPSOQ e o instrumento cientifico mais robusto e validado internacionalmente para medir riscos psicossociais. Sua aplicacao garante diagnostico tecnicamente irrefutavel perante fiscalizacao.',
+    'O que é o COPSOQ e por que é importante?',
+    'O COPSOQ é o instrumento científico mais robusto e validado internacionalmente para medir riscos psicossociais. Sua aplicação garante diagnóstico tecnicamente irrefutável perante fiscalização.',
   ],
   [
-    'A confidencialidade dos colaboradores e garantida?',
-    'Absolutamente. Todo o processo segue os principios eticos do CFP e as diretrizes da LGPD. Nenhum dado individual e revelado, apenas analises agregadas por setor.',
+    'A confidencialidade dos colaboradores é garantida?',
+    'Absolutamente. Todo o processo segue os princípios éticos do CFP e as diretrizes da LGPD. Nenhum dado individual é revelado, apenas análises agregadas por setor.',
   ],
   [
-    'Em quanto tempo verei resultados praticos?',
-    'Diagnostico e plano de acao sao entregues em ate 30 dias. Os primeiros resultados costumam ser percebidos nos primeiros 60 a 90 dias de implementacao.',
+    'Em quanto tempo verei resultados práticos?',
+    'Diagnóstico e plano de ação são entregues em até 30 dias. Os primeiros resultados costumam ser percebidos nos primeiros 60 a 90 dias de implementação.',
   ],
   [
-    'A LM Consultoria atende empresas fora de Goias?',
-    'Sim. O processo e conduzido de forma totalmente online com aplicacao digital dos instrumentos e reunioes por videoconferencia. Atendemos todo o Brasil.',
+    'A LM Consultoria atende empresas fora de Goiás?',
+    'Sim. O processo é conduzido de forma totalmente online com aplicação digital dos instrumentos e reuniões por videoconferência. Atendemos todo o Brasil.',
   ],
 ] as const;
 
@@ -26,7 +26,7 @@ export function FAQSection() {
     <section id="faq" className="sec">
       <div className="faq-inner">
         <div className="rv">
-          <span className="stag">Duvidas</span>
+          <span className="stag">Dúvidas</span>
         </div>
         <h2 className="sh2 rv d1">Perguntas frequentes</h2>
         <div className="faq-list rv d2">

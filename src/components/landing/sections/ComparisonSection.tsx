@@ -22,10 +22,10 @@ export function ComparisonSection() {
             </div>
             <div className="comp-body bad">
               <ul className="comp-list">
-                <li><span className="icon bad">✕</span> Absenteismo elevado e não rastreado</li>
-                <li><span className="icon bad">✕</span> Presenteismo que drena produtividade</li>
+                <li><span className="icon bad">✕</span> Absenteísmo elevado e não rastreado</li>
+                <li><span className="icon bad">✕</span> Presenteísmo que drena produtividade</li>
                 <li><span className="icon bad">✕</span> Alta rotatividade e custo de reposição</li>
-                <li><span className="icon bad">✕</span> Custo crescente do plano de saude</li>
+                <li><span className="icon bad">✕</span> Custo crescente do plano de saúde</li>
               </ul>
             </div>
           </div>
@@ -42,7 +42,7 @@ export function ComparisonSection() {
               <ul className="comp-list">
                 <li><span className="icon good">✓</span> Equipes engajadas e produtivas</li>
                 <li><span className="icon good">✓</span> Redução de passivo trabalhista</li>
-                <li><span className="icon good">✓</span> Maior segurança para o crescimento do negocio</li>
+                <li><span className="icon good">✓</span> Maior segurança para o crescimento do negócio</li>
               </ul>
             </div>
           </div>
@@ -71,7 +71,7 @@ export function ComparisonSection() {
             <div className="counter-num" data-target="100">
               0%
             </div>
-            <div className="counter-label">Sigilo etico garantido</div>
+            <div className="counter-label">Sigilo ético garantido</div>
           </div>
         </div>
       </div>

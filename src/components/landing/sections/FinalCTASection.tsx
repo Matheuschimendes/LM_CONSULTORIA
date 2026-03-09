@@ -10,13 +10,13 @@ export function FinalCTASection() {
           "Quanto <em>VALE</em> uma assessoria especializada para proteger sua empresa e seus colaboradores?"
         </p>
         <p className="final-sub rv d1">
-          Vamos construir uma parceria estrategica baseada em ciencia, resultados e zero burocracia.
+          Vamos construir uma parceria estratégica baseada em ciência, resultados e zero burocracia.
         </p>
         <a href={WA_START} className="btn-cta rv d2" style={{ display: 'inline-flex' }} target="_blank" rel="noreferrer">
           <WhatsIcon /> Quero Minha Empresa Protegida - Falar com Liane
         </a>
         <div className="final-creds rv d3">
-          <strong>Liane Milhomem</strong> - Psicologa (CRP 22/02023) | Especialista em Implementacao Estrategica da
+          <strong>Liane Milhomem</strong> - Psicóloga (CRP 22/02023) | Especialista em Implementação Estratégica da
           NR-01
         </div>
       </div>

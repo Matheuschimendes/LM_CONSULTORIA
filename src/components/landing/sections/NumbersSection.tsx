@@ -19,7 +19,7 @@ export function NumbersSection() {
         <div className="num-div rv d2" />
         <div className="num-item rv d3">
           <div className="num-val">100%</div>
-          <div className="num-lbl">Sigilo etico</div>
+          <div className="num-lbl">Sigilo ético</div>
         </div>
         <div className="num-div rv d3" />
         <div className="num-item rv d4">

@@ -9,14 +9,14 @@ export function QuoteSection() {
           />
         </svg>
         <p className="quote-text">
-          "Voce esta a um diagnostico de <em>proteger sua empresa, engajar sua equipe</em> e transformar compliance em
+          "Você está a um diagnóstico de <em>proteger sua empresa, engajar sua equipe</em> e transformar compliance em
           lucro."
         </p>
         <div className="quote-author">
           <div className="qa-av">L</div>
           <div>
             <div className="qa-name">Liane Milhomem</div>
-            <div className="qa-role">Psicologa Organizacional - CRP 22/02023</div>
+            <div className="qa-role">Psicóloga Organizacional - CRP 22/02023</div>
           </div>
         </div>
       </div>

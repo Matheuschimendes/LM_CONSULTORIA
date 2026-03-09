@@ -5,7 +5,7 @@ export function ContextSection() {
         <div className="rv">
           <span className="stag">Contexto Atual</span>
         </div>
-        <h2 className="sh2 rv d1">O cenario de gestão mudou - e a NR-01 tambem</h2>
+        <h2 className="sh2 rv d1">O cenário de gestão mudou - e a NR-01 também</h2>
         <div className="pq-grid">
           <p className="ssub rv d2">Empresas que ignoram o risco psicossocial pagam caro.</p>
         </div>
@@ -33,7 +33,7 @@ export function ContextSection() {
             <div className="mc-body">
               <div className="mc-tag">Obrigatoriedade</div>
               <h3>NR-01 e lei vigente</h3>
-              <p>Mapeamento de riscos psicossociais no GRO/PGR ja e obrigatorio. Desprotegidos arriscam autuacao e multas.</p>
+              <p>Mapeamento de riscos psicossociais no GRO/PGR já é obrigatório. Desprotegidos arriscam autuação e multas.</p>
             </div>
           </div>
 
@@ -47,8 +47,8 @@ export function ContextSection() {
               </svg>
             </div>
             <div className="mc-body">
-              <div className="mc-tag">Precisao Cientifica</div>
-              <h3>Ciencia como protecao</h3>
+              <div className="mc-tag">Precisão Científica</div>
+              <h3>Ciência como proteção</h3>
               <p>ISO 45003 e COPSOQ fornecem instrumentos validados internacionalmente para identificar adoecimento organizacional.</p>
             </div>
           </div>
@@ -64,8 +64,8 @@ export function ContextSection() {
             </div>
             <div className="mc-body">
               <div className="mc-tag">ROI Comprovado</div>
-              <h3>Prevencao gera lucro</h3>
-              <p>Empresas com saude psicossocial preventiva reduzem custos, aumentam produtividade e fortalecem a marca.</p>
+              <h3>Prevenção gera lucro</h3>
+              <p>Empresas com saúde psicossocial preventiva reduzem custos, aumentam produtividade e fortalecem a marca.</p>
             </div>
           </div>
         </div>

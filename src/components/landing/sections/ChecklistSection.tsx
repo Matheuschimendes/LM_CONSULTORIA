@@ -3,15 +3,15 @@ import { WhatsIcon } from '../WhatsIcon';
 
 const items = [
   ['Mapeamento psicossocial COPSOQ', 'Incluso'],
-  ['Relatorio tecnico por setor', 'Incluso'],
+  ['Relatório técnico por setor', 'Incluso'],
   ['PGR Psicossocial (NR-01 compliant)', 'Incluso'],
-  ['Plano de acao integrado ao GRO', 'Incluso'],
-  ['Intervencao tecnica NR-17', 'Incluso'],
-  ['Protocolo de lideranca preventiva', 'Incluso'],
-  ['Matriz de priorizacao de riscos', 'Incluso'],
-  ['Suporte em fiscalizacao MTE', 'Bonus'],
+  ['Plano de ação integrado ao GRO', 'Incluso'],
+  ['Intervenção técnica NR-17', 'Incluso'],
+  ['Protocolo de liderança preventiva', 'Incluso'],
+  ['Matriz de priorização de riscos', 'Incluso'],
+  ['Suporte em fiscalização MTE', 'Bonus'],
   ['Consultoria Selo Lei 14.831', 'Bonus'],
-  ['Relatorio semestral de evolucao', 'Bonus'],
+  ['Relatório semestral de evolução', 'Bonus'],
 ] as const;
 
 export function ChecklistSection() {
@@ -22,7 +22,7 @@ export function ChecklistSection() {
           <span className="stag">Resumo</span>
         </div>
         <h2 className="sh2 rv d1" style={{ textAlign: 'center' }}>
-          Tudo que voce vai receber
+          Tudo que você vai receber
         </h2>
 
         <div className="check-grid rv d2">

@@ -5,7 +5,7 @@ export function NavBar() {
     <nav>
       <img
         src="/logo.svg"
-        alt="Liane Milhomem Psicologia Estrategica Corporativa"
+        alt="Liane Milhomem Psicologia Estratégica Corporativa"
         className="nav-logo"
         loading="eager"
       />
@@ -14,7 +14,7 @@ export function NavBar() {
       </div> */}
       <div className="nav-right">
         <a href="#mapa" className="nav-link">
-          Metodo
+          Método
         </a>
         <a href="#depoimentos" className="nav-link">
           Resultados

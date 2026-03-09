@@ -28,21 +28,21 @@ export function HeroSection() {
           <h1 className="hero-h1">
             Liane Milhomem:
             <br />
-            <em>Implementacao Estrategica</em>
+            <em>Implementação Estratégica</em>
             <br />da NR-01
           </h1>
           <p className="hero-sub">
-            LM Consultoria - Inteligencia Psicossocial & Performance. Maximize a performance da sua operacao com um
-            Diagnostico Validado pelo MTE e alinhado aos padroes globais da ISO 45003.
+            LM Consultoria - Inteligência Psicossocial & Performance. Maximize a performance da sua operação com um
+            Diagnóstico Validado pelo MTE e alinhado aos padrões globais da ISO 45003.
           </p>
           <div className="hero-cta-wrap">
             <a href={WA_DIAG} className="btn-cta" target="_blank" rel="noreferrer">
-              <WhatsIcon /> Solicitar Diagnostico de Performance - 15 min
+              <WhatsIcon /> Solicitar Diagnóstico de Performance - 15 min
             </a>
             <div className="hero-trust">
               <span className="trust-i">Sigilo garantido</span>
               <span className="trust-i">Sem burocracia</span>
-              <span className="trust-i">Baseado em ciencia</span>
+              <span className="trust-i">Baseado em ciência</span>
             </div>
           </div>
         </div>
@@ -60,13 +60,13 @@ export function HeroSection() {
               </div>
               <div>
                 <div className="pc-name">Liane Milhomem</div>
-                <div className="pc-role">Psicologa - CRP 22/02023</div>
+                <div className="pc-role">Psicóloga - CRP 22/02023</div>
               </div>
             </div>
             <div className="pc-stats">
               <div className="pc-stat">
                 <div className="pc-stat-val">NR-01</div>
-                <div className="pc-stat-lbl">Estrategica</div>
+                <div className="pc-stat-lbl">Estratégica</div>
               </div>
               <div className="pc-stat">
                 <div className="pc-stat-val">ISO</div>
@@ -77,7 +77,7 @@ export function HeroSection() {
                 <div className="pc-stat-lbl">Validado</div>
               </div>
             </div>
-            <div className="pc-chart-label">Performance pos-diagnostico</div>
+            <div className="pc-chart-label">Performance pós-diagnóstico</div>
             <div className="pc-bars">
               <div className="pc-bar" style={{ height: '35%' }} />
               <div className="pc-bar" style={{ height: '45%', opacity: 0.65 }} />

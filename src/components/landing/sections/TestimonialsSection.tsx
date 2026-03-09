@@ -21,13 +21,13 @@ export function TestimonialsSection() {
               <div className="dep-av">M</div>
               <div>
                 <div className="dep-name">Marcos Silveira</div>
-                <div className="dep-role">CEO - Logistica - Goiania</div>
+                <div className="dep-role">CEO - Logística - Goiânia</div>
               </div>
               <div className="dep-stars">★★★★★</div>
             </div>
             <p className="dep-text">
               "A Liane transformou a NR-01 em vantagem competitiva real. Reduzimos o turnover em 40% em seis meses com
-              documentacao solida para qualquer fiscalizacao."
+              documentação sólida para qualquer fiscalização."
             </p>
             <span className="dep-badge">-40% turnover</span>
           </div>
@@ -37,15 +37,15 @@ export function TestimonialsSection() {
               <div className="dep-av">A</div>
               <div>
                 <div className="dep-name">Ana Carla Mendes</div>
-                <div className="dep-role">Diretora de RH - Farmaceutica</div>
+                <div className="dep-role">Diretora de RH - Farmacêutica</div>
               </div>
               <div className="dep-stars">★★★★★</div>
             </div>
             <p className="dep-text">
-              "O diagnostico revelou problemas que nem sabiamos existir. O absenteismo caiu visivelmente e o engajamento
+              "O diagnóstico revelou problemas que nem sabíamos existir. O absenteísmo caiu visivelmente e o engajamento
               melhorou muito."
             </p>
-            <span className="dep-badge">-50% absenteismo</span>
+            <span className="dep-badge">-50% absenteísmo</span>
           </div>
 
           <div className="dep-card rv d3">
@@ -53,15 +53,15 @@ export function TestimonialsSection() {
               <div className="dep-av">R</div>
               <div>
                 <div className="dep-name">Ricardo Fontes</div>
-                <div className="dep-role">Socio - Construtora - Brasilia</div>
+                <div className="dep-role">Sócio - Construtora - Brasília</div>
               </div>
               <div className="dep-stars">★★★★★</div>
             </div>
             <p className="dep-text">
-              "Saimos de uma autuacao iminente para um processo robusto e documentado. A seguranca juridica que temos
-              hoje e inestimavel."
+              "Saímos de uma autuação iminente para um processo robusto e documentado. A segurança jurídica que temos
+              hoje é inestimável."
             </p>
-            <span className="dep-badge">Blindagem juridica</span>
+            <span className="dep-badge">Blindagem jurídica</span>
           </div>
         </div>
       </div>
