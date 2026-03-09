@@ -560,6 +560,180 @@ nav {
   color: var(--p);
 }
 
+/* PhaseCard (migrated from CSS Module) */
+.phase-card {
+  transition-property: opacity, transform, box-shadow;
+  transition-duration: 0.6s, 0.6s, 0.25s;
+  transition-timing-function: ease, ease, ease;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(0, 182, 157, 0.12);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  background: #fff;
+}
+.phase-card.phase-card--active {
+  border-color: rgba(0, 182, 157, 0.45);
+  box-shadow: 0 8px 32px rgba(0, 182, 157, 0.16);
+}
+.phase-card__header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.phase-card__grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.phase-card__glow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(ellipse, rgba(0, 182, 157, 0.2) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.phase-card__watermark {
+  position: absolute;
+  right: 6px;
+  bottom: -4px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(0, 182, 157, 0.07);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.phase-card__icon {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+.phase-card__icon.phase-card__icon--active {
+  transform: scale(1.1);
+}
+.phase-card__norm {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 182, 157, 0.3);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  padding: 3px 8px;
+}
+.phase-card__norm-text {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #00d4b8;
+}
+.phase-card__phase {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.phase-card__phase-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00b69d, #03d4ba);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  font-weight: 900;
+  color: #fff;
+}
+.phase-card__phase-text {
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.phase-card__underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00b69d, #03d4ba);
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.phase-card__underline.phase-card__underline--active {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.phase-card__body {
+  padding: 16px 16px 18px;
+}
+.phase-card__title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.phase-card__title-letter {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #00b69d;
+}
+.phase-card__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+.phase-card__subtitle {
+  font-size: 0.58rem;
+  color: #00b69d;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.phase-card__description {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.6;
+}
+.phase-card__indicator {
+  margin-top: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #00b69d, #03d4ba);
+  transition: transform 0.3s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.phase-card__indicator.phase-card__indicator--active {
+  transform: scaleX(1);
+}
+
 #numbers {
   background: var(--darker);
   padding: 36px 6%;
@@ -1837,14 +2011,25 @@ footer {
   #hero {
     padding: 94px 4% 48px;
   }
+  .hero-inner {
+    gap: 22px;
+  }
+  .hero-copy-top {
+    margin-bottom: 14px;
+  }
   .hero-badge {
     font-size: 0.58rem;
     padding: 5px 12px;
     letter-spacing: 0.06em;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    line-height: 1.2;
+    max-width: 100%;
   }
   .hero-badge-sub {
     font-size: 0.68rem;
-    margin-top: -8px;
+    margin-top: 0;
+    line-height: 1.45;
   }
   .hero-h1 {
     font-size: clamp(1.9rem, 9vw, 2.45rem);
@@ -1852,16 +2037,21 @@ footer {
   .hero-sub {
     font-size: 1rem;
     line-height: 1.75;
+    margin-bottom: 26px;
   }
   .hero-trust {
     gap: 10px;
   }
   .hero-proof-grid {
-    grid-template-columns: 1fr;
+    margin-top: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
   }
   .hero-proof-card {
     padding: 10px 11px;
+  }
+  .hero-proof-card:last-child {
+    grid-column: 1 / -1;
   }
   .hero-proof-value {
     font-size: 1rem;
@@ -1877,14 +2067,24 @@ footer {
     max-width: 100%;
     min-height: 240px;
   }
-  .hero-gradient-image {
+  .hero-visual::before {
+    inset: 6% 4% 10%;
+    border-radius: 22px;
+  }
+  .hero-visual-shell {
     width: min(98vw, 440px);
-    opacity: 0.82;
+  }
+  .hero-gradient-image {
+    width: 100%;
+    opacity: 0.9;
+    animation: none;
   }
   .hero-visual-note {
-    left: 8px;
-    right: 8px;
-    bottom: 8px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 9px 10px;
+    text-align: center;
   }
   .hero-note-title {
     font-size: 0.64rem;
@@ -1893,8 +2093,7 @@ footer {
     font-size: 0.7rem;
   }
   .hero-visual-tags {
-    top: 8px;
-    right: 8px;
+    display: none;
   }
   .hero-visual-tags span {
     font-size: 0.56rem;
@@ -2108,5 +2307,630 @@ footer {
   footer {
     flex-direction: column;
     text-align: center;
+  }
+}
+/* ─────────────────────────────────────────────────────────────────────────────
+   SolutionMAPASection (legacy styles)
+   Styles for the M.A.P.A. section.
+   Depends on the global CSS variables in :root.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* ── section ──────────────────────────────────────────────────────────────── */
+.mapaSection {
+  background: var(--warm);
+  /* padding inherited from global .sec rule: 92px 6% */
+}
+
+/* ── header ───────────────────────────────────────────────────────────────── */
+.header {
+  margin-bottom: 40px;
+}
+.h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--t1);
+  margin-bottom: 8px;
+}
+.h2 em {
+  font-style: italic;
+  background: linear-gradient(135deg, #008c79, #00b69d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.lead {
+  font-size: 0.9rem;
+  color: var(--t2);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0;
+}
+
+/* ── interactive banner ───────────────────────────────────────────────────── */
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 256px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--cb);
+  margin-bottom: 16px;
+}
+.bnrLeft {
+  background: linear-gradient(135deg, #00302a, #004538);
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.bnrGrid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+}
+.bnrCur {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+.bnrRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.bnrBadge {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--grad);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+}
+.bnrFase {
+  font-size: 0.58rem;
+  color: var(--pl);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.bnrTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+.bnrDesc {
+  font-size: 0.82rem;
+  color: var(--tm);
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0;
+}
+.tabs {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 13px;
+  border-radius: 50px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+}
+.tabLetter {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+}
+.bnrRight {
+  background: var(--white);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-left: 1px solid var(--cb);
+}
+.bnrRightLabel {
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--p);
+  margin: 0 0 2px;
+}
+.deliverable {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+.delDot {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--grad);
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delDot svg {
+  width: 10px;
+  height: 10px;
+}
+.delText {
+  font-size: 0.77rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ── 4-card grid ──────────────────────────────────────────────────────────── */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+/* ── phase card ───────────────────────────────────────────────────────────── */
+.phaseCard {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--white);
+  border: 1px solid var(--cb);
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.phaseCard[data-active="true"] {
+  border-color: rgba(0, 182, 157, 0.44);
+  box-shadow: 0 8px 28px rgba(0, 182, 157, 0.14);
+}
+.mpcVisual {
+  height: 112px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mpcGridSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.mpcGlow {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 182, 157, 0.2) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mpcWatermark {
+  position: absolute;
+  right: 4px;
+  bottom: -6px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(0, 182, 157, 0.07);
+  pointer-events: none;
+  user-select: none;
+}
+.mpcIcon {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+.mpcNormPill {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(0, 182, 157, 0.3);
+  backdrop-filter: blur(6px);
+  border-radius: 7px;
+  padding: 3px 7px;
+  font-size: 0.52rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pl);
+}
+.mpcPhaseNum {
+  position: absolute;
+  bottom: 7px;
+  left: 9px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mpcNumCircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--grad);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  font-weight: 900;
+  color: #fff;
+}
+.mpcNumLabel {
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.mpcActiveBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--grad);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  transform-origin: left;
+}
+.mpcBody {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.mpcHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 7px;
+}
+.mpcLetter {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--p);
+  line-height: 1;
+}
+.mpcTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--t1);
+  line-height: 1.2;
+}
+.mpcSubtitle {
+  font-size: 0.54rem;
+  color: var(--p);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.mpcDesc {
+  font-size: 0.75rem;
+  color: var(--t2);
+  line-height: 1.6;
+  flex: 1;
+}
+.mpcAccentBar {
+  margin-top: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--grad);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+/* ── value strip ──────────────────────────────────────────────────────────── */
+.valueStrip {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 182, 157, 0.14);
+}
+.mvsHeader {
+  padding: 9px 22px;
+  background: linear-gradient(90deg, #00302a, #003830);
+  border-bottom: 1px solid rgba(0, 182, 157, 0.12);
+}
+.mvsLabel {
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--pl);
+}
+.mvsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #00302a;
+}
+.mvsItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 20px 22px;
+}
+.mvsItem:not(:last-child) {
+  border-right: 1px solid rgba(0, 182, 157, 0.1);
+}
+.mvsIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.mvsTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.mvsDesc {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.48);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── RESPONSIVE — tablet ≤1020px ─────────────────────────────────────────── */
+@media (max-width: 1020px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+  .bnrRight {
+    border-left: none;
+    border-top: 1px solid var(--cb);
+    padding: 20px 22px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .bnrRightLabel {
+    width: 100%;
+  }
+  .deliverable {
+    flex: 1 1 calc(33% - 12px);
+    min-width: 160px;
+  }
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .mvsGrid {
+    grid-template-columns: 1fr;
+  }
+  .mvsItem {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0, 182, 157, 0.1);
+    padding: 16px 20px;
+  }
+  .mvsItem:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ── RESPONSIVE — mobile ≤640px ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .mapaSection {
+    padding: 64px 5%;
+  }
+  .header {
+    margin-bottom: 28px;
+  }
+  .banner {
+    border-radius: 16px;
+    margin-bottom: 12px;
+  }
+  .bnrLeft {
+    padding: 22px 20px;
+  }
+  .bnrRow {
+    gap: 10px;
+  }
+  .bnrBadge {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    border-radius: 9px;
+  }
+  .bnrTitle {
+    font-size: 1.05rem;
+  }
+  .bnrDesc {
+    font-size: 0.8rem;
+  }
+  .tabs {
+    gap: 6px;
+  }
+  .tab {
+    padding: 4px 10px;
+    font-size: 0.58rem;
+  }
+  .bnrRight {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 18px;
+  }
+  .deliverable {
+    flex: unset;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  /* horizontal card layout on mobile */
+  .phaseCard {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .mpcVisual {
+    width: 88px;
+    height: auto;
+    flex-direction: column;
+    border-radius: 0;
+    flex-shrink: 0;
+  }
+  .mpcWatermark {
+    font-size: 3rem;
+    right: 2px;
+    bottom: -4px;
+  }
+  .mpcNormPill {
+    display: none;
+  }
+  .mpcPhaseNum {
+    bottom: 5px;
+    left: 6px;
+  }
+  .mpcBody {
+    padding: 12px 14px 14px;
+  }
+  .mpcDesc {
+    display: none; /* hidden on mobile to keep card compact */
+  }
+  .valueStrip {
+    border-radius: 14px;
+  }
+  .mvsHeader {
+    padding: 8px 16px;
+  }
+  .mvsItem {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+  .mvsIcon {
+    font-size: 1.2rem;
+  }
+}
+
+/* =====================================================
+   MAPA SECTION RESPONSIVE FIX
+===================================================== */
+
+/* banner layout */
+#mapa > div > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+}
+
+/* cards grid */
+#mapa > div > div:nth-child(3) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* painel entregáveis */
+#mapa > div > div:nth-child(2) > div:last-child {
+  width: 260px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+  /* banner */
+  #mapa > div > div:nth-child(2) {
+    grid-template-columns: 1fr;
+  }
+
+  /* painel entregáveis */
+  #mapa > div > div:nth-child(2) > div:last-child {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(0, 182, 157, 0.12);
+  }
+
+  /* cards */
+  #mapa > div > div:nth-child(3) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+  /* padding section */
+  #mapa {
+    padding: 4rem 1.2rem !important;
+  }
+
+  /* banner */
+  #mapa > div > div:nth-child(2) {
+    border-radius: 16px;
+  }
+
+  /* cards */
+  #mapa > div > div:nth-child(3) {
+    grid-template-columns: 1fr;
+  }
+
+  /* card spacing */
+  #mapa > div > div:nth-child(3) > div {
+    border-radius: 14px;
+  }
+
+  /* value strip */
+  #mapa > div > div:nth-child(4) > div:last-child {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* itens da faixa final */
+  #mapa > div > div:nth-child(4) > div:last-child > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0, 182, 157, 0.12);
+  }
+
+  #mapa > div > div:nth-child(4) > div:last-child > div:last-child {
+    border-bottom: none;
   }
 }
