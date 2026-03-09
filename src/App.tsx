@@ -1,4 +1,5 @@
 import { useLandingInteractions } from './components/landing/hooks/useLandingInteractions';
+import { SeoHead } from './components/SeoHead';
 // import { AudienceSection } from './components/landing/sections/AudienceSection';
 import { ChecklistSection } from './components/landing/sections/ChecklistSection';
 import { ComparisonSection } from './components/landing/sections/ComparisonSection';
@@ -20,6 +21,7 @@ export default function App() {
 
   return (
     <>
+      <SeoHead />
       <NavBar />
       <HeroSection />
       <NumbersSection />
