@@ -5,16 +5,18 @@ export function ContextSection() {
         <div className="rv">
           <span className="stag">Contexto Atual</span>
         </div>
-        <h2 className="sh2 rv d1">O cenario de gestao mudou - e a NR-01 tambem</h2>
-        <p className="ssub rv d2">Empresas que ignoram o risco psicossocial pagam caro.</p>
+        <h2 className="sh2 rv d1">O cenario de gestão mudou - e a NR-01 tambem</h2>
+        <div className="pq-grid">
+          <p className="ssub rv d2">Empresas que ignoram o risco psicossocial pagam caro.</p>
+        </div>
 
-        <div className="section-media rv d2">
+        {/* <div className="section-media rv d2">
           <img
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80"
             alt="Executivos analisando indicadores de performance"
             loading="lazy"
           />
-        </div>
+        </div> */}
 
         <div className="mudou-grid">
           <div className="mudou-card rv d1">

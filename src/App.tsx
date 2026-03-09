@@ -1,8 +1,8 @@
 import { useLandingInteractions } from './components/landing/hooks/useLandingInteractions';
-import { AudienceSection } from './components/landing/sections/AudienceSection';
+// import { AudienceSection } from './components/landing/sections/AudienceSection';
 import { ChecklistSection } from './components/landing/sections/ChecklistSection';
 import { ComparisonSection } from './components/landing/sections/ComparisonSection';
-import { ContextSection } from './components/landing/sections/ContextSection';
+// import { ContextSection } from './components/landing/sections/ContextSection';
 import { FAQSection } from './components/landing/sections/FAQSection';
 import { FinalCTASection } from './components/landing/sections/FinalCTASection';
 import { FooterSection } from './components/landing/sections/FooterSection';
@@ -11,7 +11,7 @@ import { MatrixSection } from './components/landing/sections/MatrixSection';
 import { NavBar } from './components/landing/sections/NavBar';
 import { NumbersSection } from './components/landing/sections/NumbersSection';
 import { PillarsSection } from './components/landing/sections/PillarsSection';
-import { QuoteSection } from './components/landing/sections/QuoteSection';
+// import { QuoteSection } from './components/landing/sections/QuoteSection';
 import { SolutionMAPASection } from './components/landing/sections/SolutionMAPASection';
 import { TestimonialsSection } from './components/landing/sections/TestimonialsSection';
 
@@ -23,10 +23,10 @@ export default function App() {
       <NavBar />
       <HeroSection />
       <NumbersSection />
-      <QuoteSection />
-      <ContextSection />
-      <AudienceSection />
+      {/* <QuoteSection /> */}
       <SolutionMAPASection />
+      {/* <ContextSection /> */}
+      {/* <AudienceSection /> */}
       <MatrixSection />
       <PillarsSection />
       <ComparisonSection />

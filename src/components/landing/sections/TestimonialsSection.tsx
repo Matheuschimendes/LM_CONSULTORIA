@@ -7,13 +7,13 @@ export function TestimonialsSection() {
         </div>
         <h2 className="sh2 light rv d1">O que dizem nossos parceiros</h2>
 
-        <div className="section-media rv d2">
+        {/* <div className="section-media rv d2">
           <img
             src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1400&q=80"
             alt="Diretores e RH discutindo resultados com consultoria"
             loading="lazy"
           />
-        </div>
+        </div> */}
 
         <div className="dep-grid" style={{ marginTop: '40px' }}>
           <div className="dep-card rv d1">

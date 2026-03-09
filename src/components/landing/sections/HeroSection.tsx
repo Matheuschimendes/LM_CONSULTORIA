@@ -21,6 +21,7 @@ export function HeroSection() {
 
       <div className="hero-inner">
         <div>
+
           <div className="hero-badge">
             <span className="pulse-dot" /> NR-01 - ISO 45003 - Validado MTE
           </div>
@@ -47,7 +48,8 @@ export function HeroSection() {
         </div>
 
         <div className="hero-visual">
-          <div className="profile-card">
+          <img src="/Gradient.svg" alt="" aria-hidden="true" className="hero-gradient-image " loading="eager" />
+          {/* <div className="profile-card">
             <div className="pc-top">
               <div className="pc-avatar">
                 <img
@@ -91,7 +93,7 @@ export function HeroSection() {
               <span className="pc-seal">NR-17</span>
               <span className="pc-seal">Lei 14.831</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

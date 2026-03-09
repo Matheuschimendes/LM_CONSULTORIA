@@ -3,9 +3,15 @@ import { WA_START } from '../constants';
 export function NavBar() {
   return (
     <nav>
-      <div className="nav-brand">
+      <img
+        src="/logo.svg"
+        alt="Liane Milhomem Psicologia Estrategica Corporativa"
+        className="nav-logo"
+        loading="eager"
+      />
+      {/* <div className="nav-brand">
         LM <span>Consultoria</span>
-      </div>
+      </div> */}
       <div className="nav-right">
         <a href="#mapa" className="nav-link">
           Metodo

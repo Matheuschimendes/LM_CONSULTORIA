@@ -5,9 +5,9 @@ export function ComparisonSection() {
         <div className="rv">
           <span className="stag">Por que a LM Consultoria?</span>
         </div>
-        <h2 className="sh2 rv d1">Comparativo de Retorno: Custo da Inacao vs. Lucro da Prevencao</h2>
+        <h2 className="sh2 rv d1">Comparativo de Retorno: Custo da Inação vs. Lucro da Prevenção</h2>
         <p className="ssub rv d2" style={{ marginBottom: '32px' }}>
-          Decisao que impacta diretamente o resultado financeiro.
+          Decisão que impacta diretamente o resultado financeiro.
         </p>
 
 
@@ -17,14 +17,14 @@ export function ComparisonSection() {
               <div className="comp-head-icon bad">⚠️</div>
               <div>
                 <div className="comp-head-label bad">Sem a LM Consultoria</div>
-                <div className="comp-head-title">Custo da Inacao</div>
+                <div className="comp-head-title">Custo da Inação</div>
               </div>
             </div>
             <div className="comp-body bad">
               <ul className="comp-list">
-                <li><span className="icon bad">✕</span> Absenteismo elevado e nao rastreado</li>
+                <li><span className="icon bad">✕</span> Absenteismo elevado e não rastreado</li>
                 <li><span className="icon bad">✕</span> Presenteismo que drena produtividade</li>
-                <li><span className="icon bad">✕</span> Alta rotatividade e custo de reposicao</li>
+                <li><span className="icon bad">✕</span> Alta rotatividade e custo de reposição</li>
                 <li><span className="icon bad">✕</span> Custo crescente do plano de saude</li>
               </ul>
             </div>
@@ -35,14 +35,14 @@ export function ComparisonSection() {
               <div className="comp-head-icon good">✅</div>
               <div>
                 <div className="comp-head-label good">Com a LM Consultoria</div>
-                <div className="comp-head-title">Lucro da Prevencao</div>
+                <div className="comp-head-title">Lucro da Prevenção</div>
               </div>
             </div>
             <div className="comp-body good">
               <ul className="comp-list">
                 <li><span className="icon good">✓</span> Equipes engajadas e produtivas</li>
-                <li><span className="icon good">✓</span> Reducao de passivo trabalhista</li>
-                <li><span className="icon good">✓</span> Maior seguranca para o crescimento do negocio</li>
+                <li><span className="icon good">✓</span> Redução de passivo trabalhista</li>
+                <li><span className="icon good">✓</span> Maior segurança para o crescimento do negocio</li>
               </ul>
             </div>
           </div>
@@ -53,7 +53,7 @@ export function ComparisonSection() {
             <div className="counter-num" data-target="40" data-prefix="-">
               0%
             </div>
-            <div className="counter-label">Reducao em afastamentos</div>
+            <div className="counter-label">Redução em afastamentos</div>
           </div>
           <div className="counter-box rv d2">
             <div className="counter-num" data-target="60" data-prefix="-">
