@@ -1,15 +1,7 @@
-import { useState } from 'react';
-import {
-  INSTITUTIONAL_VIDEO_DRIVE_URL,
-  INSTITUTIONAL_VIDEO_PREVIEW_URL,
-  INSTITUTIONAL_VIDEO_THUMB_URL,
-  WA_DIAG,
-} from '../constants';
+import { INSTITUTIONAL_VIDEO_SRC, INSTITUTIONAL_VIDEO_VIEW, WA_DIAG } from '../constants';
 import { WhatsIcon } from '../WhatsIcon';
 
 export function HeroSection() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
   return (
     <section id="hero">
       <div className="hero-orb a" />
@@ -57,49 +49,21 @@ export function HeroSection() {
 
         <div className="hero-visual">
           <div className="hero-video-wrap">
-            {isVideoPlaying ? (
-              <iframe
-                className="hero-video-embed"
-                src={`${INSTITUTIONAL_VIDEO_PREVIEW_URL}?autoplay=1`}
-                title="Vídeo institucional da LM Consultoria"
-                loading="lazy"
-                allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            ) : (
-              <button
-                type="button"
-                className="hero-video-trigger"
-                onClick={() => setIsVideoPlaying(true)}
-                aria-label="Reproduzir vídeo institucional da LM Consultoria"
-              >
-                <img
-                  src={INSTITUTIONAL_VIDEO_THUMB_URL}
-                  alt="Capa do vídeo institucional da LM Consultoria"
-                  className="hero-video-thumb"
-                  loading="eager"
-                />
-                <span className="hero-video-shade" aria-hidden="true" />
-                <span className="hero-video-play" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M8 5v14l11-7-11-7z" fill="currentColor" />
-                  </svg>
-                </span>
-                <span className="hero-video-caption">Assistir vídeo institucional</span>
-              </button>
-            )}
+            <video
+              className="hero-video"
+              controls
+              preload="metadata"
+              playsInline
+              poster="/Gradient.svg"
+              aria-label="Vídeo institucional da LM Consultoria"
+            >
+              <source src={INSTITUTIONAL_VIDEO_SRC} type="video/mp4" />
+              Seu navegador não suporta vídeo em HTML5.
+            </video>
           </div>
-          <div className="hero-video-actions">
-            <a href={INSTITUTIONAL_VIDEO_DRIVE_URL} className="hero-video-link" target="_blank" rel="noreferrer">
-              Abrir no Google Drive
-            </a>
-            {isVideoPlaying ? (
-              <button type="button" className="hero-video-close" onClick={() => setIsVideoPlaying(false)}>
-                Fechar vídeo
-              </button>
-            ) : null}
-          </div>
+          <a className="hero-video-link" href={INSTITUTIONAL_VIDEO_VIEW} target="_blank" rel="noreferrer">
+            Abrir vídeo no Google Drive
+          </a>
           {/* <div className="profile-card">
             <div className="pc-top">
               <div className="pc-avatar">

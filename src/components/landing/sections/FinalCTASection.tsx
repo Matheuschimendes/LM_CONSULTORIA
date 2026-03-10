@@ -7,7 +7,7 @@ export function FinalCTASection() {
       <div className="final-orb" />
       <div className="final-inner">
         <p className="final-q rv">
-          "Quanto <em>VALE</em> uma assessoria especializada para proteger sua empresa e seus colaboradores?"
+          Quanto <em>VALE</em> uma assessoria especializada para proteger sua empresa e seus colaboradores?
         </p>
         <p className="final-sub rv d1">
           Vamos construir uma parceria estratégica baseada em ciência, resultados e zero burocracia.

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LM Consultoria">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00302a"/>
+      <stop offset="100%" stop-color="#001f1a"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#03d4ba"/>
+      <stop offset="100%" stop-color="#00b69d"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <path d="M14 12h10v30h14v10H14z" fill="#fff"/>
+  <path d="M32 52V12h8l8 13 8-13h8v40h-10V30l-6 10h-2l-6-10v22z" fill="url(#acc)"/>
+</svg>
