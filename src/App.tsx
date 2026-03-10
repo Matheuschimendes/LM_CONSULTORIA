@@ -1,5 +1,6 @@
 import { useLandingInteractions } from './components/landing/hooks/useLandingInteractions';
 import { SeoHead } from './components/SeoHead';
+import { WhatsSubtleButton } from './components/landing/WhatsSubtleButton';
 // import { AudienceSection } from './components/landing/sections/AudienceSection';
 import { ChecklistSection } from './components/landing/sections/ChecklistSection';
 import { ComparisonSection } from './components/landing/sections/ComparisonSection';
@@ -37,6 +38,7 @@ export default function App() {
       <FAQSection />
       <FinalCTASection />
       <FooterSection />
+      <WhatsSubtleButton />
     </>
   );
 }

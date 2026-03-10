@@ -172,7 +172,7 @@ export function SolutionMAPASection() {
             Método Proprietário
           </span>
           <h2 style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Merriweather', serif",
             fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700,
             lineHeight: 1.1, color: "#1A1A1A", marginBottom: 10,
           }}>
@@ -218,13 +218,13 @@ export function SolutionMAPASection() {
                   background: "linear-gradient(135deg,#00B69D,#03D4BA)",
                   display: "flex", alignItems: "center", justifyContent: "center",
                 }}>
-                  <span style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "1.4rem", fontWeight: 700, color: "#fff" }}>{cur.letter}</span>
+                  <span style={{ fontFamily: "'Merriweather',serif", fontSize: "1.4rem", fontWeight: 700, color: "#fff" }}>{cur.letter}</span>
                 </div>
                 <div>
                   <div style={{ fontSize: ".6rem", color: "#00D4B8", textTransform: "uppercase", letterSpacing: ".08em", fontWeight: 700 }}>
                     Fase {active + 1} · {cur.norm}
                   </div>
-                  <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? "1.15rem" : "1.3rem", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>
+                  <div style={{ fontFamily: "'Merriweather',serif", fontSize: isMobile ? "1.15rem" : "1.3rem", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>
                     {cur.acro} — {cur.subtitle}
                   </div>
                 </div>
@@ -250,17 +250,18 @@ export function SolutionMAPASection() {
                   onClick={() => setActive(i)}
                   style={{
                     display: "flex", alignItems: "center", gap: 6,
-                    padding: isMobile ? "6px 12px" : "6px 14px", borderRadius: 50,
-                    fontSize: isMobile ? ".6rem" : ".65rem", fontWeight: 700, letterSpacing: ".05em", textTransform: "uppercase",
+                    padding: isMobile ? "9px 12px" : "6px 14px", borderRadius: 50,
+                    fontSize: isMobile ? ".62rem" : ".65rem", fontWeight: 700, letterSpacing: ".05em", textTransform: "uppercase",
                     cursor: "pointer", transition: "all .2s",
                     background: i === active ? "linear-gradient(135deg,#00B69D,#03D4BA)" : "rgba(255,255,255,.06)",
                     color: i === active ? "#fff" : "rgba(255,255,255,.4)",
                     border: `1px solid ${i === active ? "transparent" : "rgba(0,182,157,.2)"}`,
                     flexShrink: 0,
                     whiteSpace: "nowrap",
+                    minHeight: isMobile ? 40 : undefined,
                   }}
                 >
-                  <span style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: ".85rem" }}>{p.letter}</span>
+                  <span style={{ fontFamily: "'Merriweather',serif", fontSize: ".85rem" }}>{p.letter}</span>
                   <span>{p.acro}</span>
                 </button>
               ))}
@@ -344,7 +345,7 @@ export function SolutionMAPASection() {
                   {/* watermark letter */}
                   <span style={{
                     position: "absolute", right: 6, bottom: -4,
-                    fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? "4rem" : "5rem", fontWeight: 700,
+                    fontFamily: "'Merriweather',serif", fontSize: isMobile ? "4rem" : "5rem", fontWeight: 700,
                     color: "rgba(0,182,157,.07)", lineHeight: 1, pointerEvents: "none", userSelect: "none",
                   }}>{p.letter}</span>
                   {/* icon */}
@@ -384,11 +385,11 @@ export function SolutionMAPASection() {
                 <div style={{ padding: isMobile ? "14px 14px 16px" : "16px 16px 18px" }}>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 6 }}>
                     <span style={{
-                      fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? "1.45rem" : "1.6rem", fontWeight: 700,
+                      fontFamily: "'Merriweather',serif", fontSize: isMobile ? "1.45rem" : "1.6rem", fontWeight: 700,
                       lineHeight: 1, color: "#00B69D",
                     }}>{p.letter}</span>
                     <div>
-                      <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? ".95rem" : "1rem", fontWeight: 700, color: "#1A1A1A", lineHeight: 1.2 }}>{p.acro}</div>
+                      <div style={{ fontFamily: "'Merriweather',serif", fontSize: isMobile ? ".95rem" : "1rem", fontWeight: 700, color: "#1A1A1A", lineHeight: 1.2 }}>{p.acro}</div>
                       <div style={{ fontSize: ".58rem", color: "#00B69D", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".06em" }}>{p.subtitle}</div>
                     </div>
                   </div>
@@ -436,7 +437,7 @@ export function SolutionMAPASection() {
               }}>
                 <span style={{ fontSize: "1.5rem", flexShrink: 0 }}>{v.icon}</span>
                 <div>
-                  <div style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: isMobile ? ".95rem" : "1rem", fontWeight: 700, color: "#fff", marginBottom: 4 }}>{v.title}</div>
+                  <div style={{ fontFamily: "'Merriweather',serif", fontSize: isMobile ? ".95rem" : "1rem", fontWeight: 700, color: "#fff", marginBottom: 4 }}>{v.title}</div>
                   <p style={{ fontSize: isMobile ? ".72rem" : ".74rem", color: "rgba(255,255,255,.5)", lineHeight: 1.6 }}>{v.desc}</p>
                 </div>
               </div>

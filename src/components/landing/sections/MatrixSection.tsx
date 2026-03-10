@@ -36,7 +36,7 @@ export function MatrixSection() {
             </div>
           </div>
 
-          <div className="rv d2" style={{ position: 'relative', paddingLeft: '28px' }}>
+          <div className="rv d2 matriz-side">
             <div className="matrix-y-label">{'<- Severidade ->'}</div>
             <div className="matrix-grid">
               <div className="mx-cell cell-a">

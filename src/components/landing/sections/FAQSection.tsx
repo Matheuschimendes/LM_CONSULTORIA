@@ -16,7 +16,7 @@ const faqs = [
     'Diagnóstico e plano de ação são entregues em até 30 dias. Os primeiros resultados costumam ser percebidos nos primeiros 60 a 90 dias de implementação.',
   ],
   [
-    'A LM Consultoria atende empresas fora de Goiás?',
+    'A LM Consultoria atende empresas fora do Maranhão?',
     'Sim. O processo é conduzido de forma totalmente online com aplicação digital dos instrumentos e reuniões por videoconferência. Atendemos todo o Brasil.',
   ],
 ] as const;
