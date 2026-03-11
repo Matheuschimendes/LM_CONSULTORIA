@@ -23,7 +23,7 @@ export function HeroSection() {
         <div>
 
           <div className="hero-badge">
-            <span className="pulse-dot" /> Conformidade NR-1 • Harmonia com diretrizes do Ministério do Trabalho
+            <span className="pulse-dot" /> NR-1 - Segurança Jurídica
           </div>
           <h1 className="hero-h1">
             Conformidade em NR-1:
