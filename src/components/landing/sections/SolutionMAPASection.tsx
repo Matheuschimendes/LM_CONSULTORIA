@@ -689,24 +689,91 @@ export function SolutionMAPASection() {
 
           <div
             style={{
-              padding: isMobile ? "16px 16px 18px" : "20px 24px 22px",
+              padding: isMobile ? "20px 16px 22px" : "28px 28px 30px",
               background: "linear-gradient(135deg,#00302A,#004538)",
+              position: "relative",
+              overflow: "hidden",
             }}
           >
-            <p
+            <div
               style={{
-                fontFamily: "'Merriweather', serif",
-                fontStyle: "italic",
-                color: "#fff",
-                fontSize: isMobile ? ".9rem" : "1rem",
-                lineHeight: 1.65,
-                margin: 0,
+                position: "absolute",
+                top: -34,
+                right: -28,
+                width: 140,
+                height: 140,
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(3,212,186,.28) 0%, rgba(3,212,186,0) 70%)",
+                pointerEvents: "none",
               }}
-            >
-              &quot;Cultura do Cuidado é Inteligência de Dados.&quot; Mapear os 13 Riscos Psicossociais não é apenas
-              uma escolha humanizada; é a Blindagem Jurídica que sua empresa precisa para sustentar a NR-1 e evitar as
-              inconsistências fiscais do eSocial. Onde existe cuidado, não existe prejuízo invisível.
-            </p>
+            />
+            <div
+              style={{
+                position: "absolute",
+                bottom: -36,
+                left: -22,
+                width: 130,
+                height: 130,
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(0,182,157,.22) 0%, rgba(0,182,157,0) 70%)",
+                pointerEvents: "none",
+              }}
+            />
+
+            <div style={{ position: "relative", zIndex: 1, maxWidth: 940, margin: "0 auto" }}>
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  fontSize: isMobile ? ".56rem" : ".6rem",
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  letterSpacing: ".1em",
+                  color: "#00D4B8",
+                  border: "1px solid rgba(0,212,184,.35)",
+                  background: "rgba(0,212,184,.1)",
+                  borderRadius: 999,
+                  padding: "5px 10px",
+                  marginBottom: isMobile ? 10 : 12,
+                }}
+              >
+                Conceito Objetivíssimo
+              </span>
+
+              <p
+                style={{
+                  fontFamily: "'Merriweather', serif",
+                  color: "#fff",
+                  fontSize: isMobile ? "1.08rem" : "1.36rem",
+                  lineHeight: isMobile ? 1.45 : 1.5,
+                  margin: 0,
+                  fontWeight: 700,
+                  letterSpacing: ".01em",
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-block",
+                    marginBottom: 6,
+                    fontStyle: "italic",
+                    fontSize: isMobile ? "1.14rem" : "1.52rem",
+                    lineHeight: 1.3,
+                    background: "linear-gradient(135deg,#00D4B8,#6FF3DF)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  &quot;Cultura do Cuidado é Inteligência de Dados.&quot;
+                </span>
+                <br />
+                Mapear os 13 Riscos Psicossociais não é apenas uma escolha humanizada; é a{" "}
+                <strong style={{ color: "#C8FFF3" }}>Blindagem Jurídica</strong> que sua empresa precisa para
+                sustentar a <strong style={{ color: "#C8FFF3" }}>NR-1</strong> e evitar as inconsistências fiscais do{" "}
+                <strong style={{ color: "#C8FFF3" }}>eSocial</strong>. Onde existe cuidado, não existe prejuízo
+                invisível.
+              </p>
+            </div>
           </div>
         </div>
 
