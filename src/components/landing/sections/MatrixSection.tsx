@@ -5,62 +5,62 @@ export function MatrixSection() {
         <div className="matriz-layout">
           <div>
             <div className="rv">
-              <span className="stag">Ferramenta Estratégica</span>
+              <span className="stag">A Dor</span>
             </div>
-            <h2 className="sh2 light rv d1">Matriz de Decisão: Severidade x Probabilidade</h2>
+            <h2 className="sh2 light rv d1">O Risco do que é Invisível</h2>
             <p className="ssub light rv d2">
-              Ferramenta visual para priorizar onde o investimento da empresa gera maior retorno financeiro.
+              Onde a falta de mapeamento vulnerabiliza sua empresa.
             </p>
             <div className="matriz-info">
               <div className="mi-card rv d2">
-                <div className="mi-icon g">🎯</div>
+                <div className="mi-icon g">⚠️</div>
                 <div>
-                  <h4>Inteligência Preditiva</h4>
-                  <p>O Sistema M.A.P.A. identifica exatamente onde a sobrecarga está drenando o lucro da operação.</p>
+                  <h4>Afastamentos Não Gerenciados</h4>
+                  <p>Transtornos mentais que se tornam crises operacionais.</p>
                 </div>
               </div>
               <div className="mi-card rv d3">
-                <div className="mi-icon t">💰</div>
+                <div className="mi-icon t">🔄</div>
                 <div>
-                  <h4>Previsibilidade de Custos</h4>
-                  <p>Antecipe afastamentos e reduza custos com substituições, treinamentos emergenciais e rescisões.</p>
+                  <h4>Conflitos Sistêmicos</h4>
+                  <p>Ambientes tóxicos que geram turnover e perda de talentos.</p>
                 </div>
               </div>
               <div className="mi-card rv d4">
                 <div className="mi-icon g">🛡️</div>
                 <div>
-                  <h4>Blindagem Jurídica</h4>
-                  <p>Documentação técnica irrefutável para fiscalização do MTE.</p>
+                  <h4>Nexo Técnico Previdenciário</h4>
+                  <p>Doenças comuns podem ser carimbadas como &quot;do trabalho&quot; por falta de provas preventivas.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="rv d2 matriz-side">
-            <div className="matrix-y-label">{'<- Severidade ->'}</div>
+            <div className="matrix-y-label">{'<- Impacto ->'}</div>
             <div className="matrix-grid">
               <div className="mx-cell cell-a">
                 <div className="mx-icon">🟡</div>
-                <div className="mx-label">Baixa Prioridade</div>
-                <div className="mx-sub">Monitoramento periódico</div>
+                <div className="mx-label">Sinais Ignorados</div>
+                <div className="mx-sub">Adoecimento silencioso</div>
               </div>
               <div className="mx-cell cell-b">
                 <div className="mx-icon">🟠</div>
-                <div className="mx-label">Zona de Atenção</div>
-                <div className="mx-sub">Plano a médio prazo</div>
+                <div className="mx-label">Conflitos Frequentes</div>
+                <div className="mx-sub">Perda de produtividade</div>
               </div>
               <div className="mx-cell cell-c">
                 <div className="mx-icon">🔵</div>
-                <div className="mx-label">Monitoramento</div>
-                <div className="mx-sub">Acompanhamento contínuo</div>
+                <div className="mx-label">Afastamentos</div>
+                <div className="mx-sub">Ruptura operacional</div>
               </div>
               <div className="mx-cell cell-d">
                 <div className="mx-icon">🔴</div>
-                <div className="mx-label">Risco Crítico</div>
-                <div className="mx-sub">Intervenção imediata</div>
+                <div className="mx-label">Passivo Trabalhista</div>
+                <div className="mx-sub">Dano financeiro imediato</div>
               </div>
             </div>
-            <div className="axis-x">{'<- Probabilidade ->'}</div>
+            <div className="axis-x">{'<- Frequência ->'}</div>
           </div>
         </div>
       </div>

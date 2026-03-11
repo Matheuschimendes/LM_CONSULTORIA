@@ -25,14 +25,14 @@ export default function App() {
       <SeoHead />
       <NavBar />
       <HeroSection />
+      <PillarsSection />
+      <MatrixSection />
+      <ComparisonSection />
+      <SolutionMAPASection />
       <NumbersSection />
       {/* <QuoteSection /> */}
-      <SolutionMAPASection />
       {/* <ContextSection /> */}
       {/* <AudienceSection /> */}
-      <MatrixSection />
-      <PillarsSection />
-      <ComparisonSection />
       <TestimonialsSection />
       <ChecklistSection />
       <FAQSection />

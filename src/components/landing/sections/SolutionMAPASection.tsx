@@ -136,15 +136,121 @@ const valueProps = [
   { icon: "💰", title: "Margem Protegida", desc: "Redução comprovada do FAP, absenteísmo e passivo trabalhista." },
 ];
 
+const psychosocialFactors = [
+  {
+    title: "Carga de Trabalho",
+    desc: "Equilíbrio entre a demanda operacional e a capacidade de entrega. Evita o erro humano e o esgotamento.",
+  },
+  {
+    title: "Conteúdo das Tarefas",
+    desc: "Significado e clareza nas atividades. Previne o desengajamento e a queda de produtividade.",
+  },
+  {
+    title: "Exigências Emocionais",
+    desc: "Esforço mental no manejo de pressões e público. Fator crítico para prevenção de Burnout.",
+  },
+  {
+    title: "Controle e Autonomia",
+    desc: "Margem de decisão do colaborador sobre seu trabalho. O baixo controle é um dos maiores geradores de estresse.",
+  },
+  {
+    title: "Participação e Controle",
+    desc: "Nível de envolvimento do colaborador nas mudanças organizacionais. Reduz a resistência e conflitos.",
+  },
+  {
+    title: "Ambiente Físico",
+    desc: "Interface entre as condições do local e o impacto psicológico. Complemento essencial à Ergonomia.",
+  },
+  {
+    title: "Cultura Organizacional",
+    desc: "Valores e padrões de comportamento da empresa. Define a saúde do clima e a retenção de talentos.",
+  },
+  {
+    title: "Relações Interpessoais",
+    desc: "Qualidade das interações e prevenção de condutas abusivas. Blindagem contra passivos por assédio.",
+  },
+  {
+    title: "Suporte Social",
+    desc: "Disponibilidade de apoio por parte de líderes e pares. Fortalece a resiliência operacional.",
+  },
+  {
+    title: "Desenvolvimento de Carreira",
+    desc: "Perspectivas de crescimento e valorização. Reduz o turnover e a perda de capital intelectual.",
+  },
+  {
+    title: "Justiça e Recompensa",
+    desc: "Percepção de equidade e reconhecimento. Garante a lealdade e o compromisso com a empresa.",
+  },
+  {
+    title: "Interface Casa-Trabalho",
+    desc: "Equilíbrio entre vida profissional e pessoal. Proteção contra processos de jornada excessiva.",
+  },
+  {
+    title: "Clareza de Papel",
+    desc: "Definição nítida de responsabilidades. Elimina a ansiedade e a ineficiência por ambiguidade.",
+  },
+];
+
 export function SolutionMAPASection() {
   const [active, setActive] = useState(0);
   const header = useInView();
   const banner = useInView(0.1);
   const strip = useInView(0.1);
+  const factorsTrackRef = useRef<HTMLDivElement>(null);
   const isMobile = useMediaQuery("(max-width: 767px)");
   const isTablet = useMediaQuery("(max-width: 1023px)");
 
   const cur = phases[active];
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const track = factorsTrackRef.current;
+    if (!track) return;
+
+    let autoplayEnabled = true;
+    let resumeTimeout: number | undefined;
+
+    const pauseAutoplay = () => {
+      autoplayEnabled = false;
+      if (resumeTimeout) window.clearTimeout(resumeTimeout);
+      resumeTimeout = window.setTimeout(() => {
+        autoplayEnabled = true;
+      }, 4500);
+    };
+
+    const step = () => {
+      const firstCard = track.querySelector<HTMLElement>("article");
+      if (!firstCard) return;
+
+      const cardWidth = firstCard.getBoundingClientRect().width;
+      const gap = 12;
+      const delta = cardWidth + gap;
+      const maxLeft = track.scrollWidth - track.clientWidth;
+
+      if (track.scrollLeft + delta >= maxLeft - 2) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+        return;
+      }
+
+      track.scrollBy({ left: delta, behavior: "smooth" });
+    };
+
+    const intervalId = window.setInterval(() => {
+      if (!autoplayEnabled) return;
+      step();
+    }, 3200);
+
+    track.addEventListener("touchstart", pauseAutoplay, { passive: true });
+    track.addEventListener("pointerdown", pauseAutoplay);
+
+    return () => {
+      window.clearInterval(intervalId);
+      if (resumeTimeout) window.clearTimeout(resumeTimeout);
+      track.removeEventListener("touchstart", pauseAutoplay);
+      track.removeEventListener("pointerdown", pauseAutoplay);
+    };
+  }, [isMobile]);
 
   return (
     <section
@@ -169,22 +275,23 @@ export function SolutionMAPASection() {
             letterSpacing: ".1em", textTransform: "uppercase",
             color: "var(--p, #00B69D)", marginBottom: 8,
           }}>
-            Método Proprietário
+            Solução Tecnológica
           </span>
           <h2 style={{
             fontFamily: "'Merriweather', serif",
             fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700,
             lineHeight: 1.1, color: "#1A1A1A", marginBottom: 10,
           }}>
-            Sistema{" "}
+            Tecnologia Aplicada ao Monitoramento dos{" "}
             <em style={{
               fontStyle: "italic",
               background: "linear-gradient(135deg,#008C79,#00B69D)",
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-            }}>M.A.P.A.</em>
+            }}>13 Riscos Psicossociais</em>
           </h2>
           <p style={{ fontSize: isMobile ? ".86rem" : ".93rem", color: "#555", lineHeight: 1.7, maxWidth: 520 }}>
-            Gestão Preditiva de Riscos Psicossociais (NR-01 e NR-17). Transformamos saúde mental em dados mensuráveis — mitigando acidentes, reduzindo o FAP e garantindo a conformidade do seu PGR.
+            O Sistema M.A.P.A. é a ferramenta que dá vida à sua NR-1. Ele transforma o subjetivo em dados auditáveis,
+            garantindo o dinamismo que a norma exige e a precisão que o eSocial fiscaliza.
           </p>
         </div>
 
@@ -442,6 +549,164 @@ export function SolutionMAPASection() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div
+          style={{
+            marginTop: isMobile ? 12 : 16,
+            borderRadius: isMobile ? 14 : 18,
+            border: "1px solid rgba(0,182,157,.15)",
+            overflow: "hidden",
+            background: "#fff",
+          }}
+        >
+          <div
+            style={{
+              padding: isMobile ? "18px 16px 16px" : "22px 24px 18px",
+              borderBottom: "1px solid rgba(0,182,157,.12)",
+              background: "linear-gradient(90deg, rgba(0,182,157,.08), rgba(0,212,184,.05))",
+            }}
+          >
+            <p
+              style={{
+                fontSize: ".62rem",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: ".09em",
+                color: "#008C79",
+                marginBottom: 8,
+              }}
+            >
+              Mapeamento Estratégico
+            </p>
+            <h3
+              style={{
+                fontFamily: "'Merriweather', serif",
+                fontSize: isMobile ? "1.14rem" : "1.4rem",
+                color: "#1A1A1A",
+                lineHeight: 1.25,
+                marginBottom: 6,
+              }}
+            >
+              Os 13 Riscos Psicossociais
+            </h3>
+            <p style={{ fontSize: isMobile ? ".76rem" : ".8rem", color: "#555", lineHeight: 1.6 }}>
+              Baseado na ISO 45003 e exigências da NR-1.
+            </p>
+          </div>
+
+          <div
+            ref={factorsTrackRef}
+            style={{
+              display: isMobile ? "flex" : "grid",
+              gridTemplateColumns: isMobile ? undefined : isTablet ? "repeat(2,minmax(0,1fr))" : "repeat(3,minmax(0,1fr))",
+              gap: isMobile ? 12 : 12,
+              padding: isMobile ? "10px" : "16px",
+              background: "linear-gradient(180deg, rgba(0,182,157,.03), rgba(0,182,157,.06))",
+              overflowX: isMobile ? "auto" : "visible",
+              WebkitOverflowScrolling: isMobile ? "touch" : undefined,
+              scrollSnapType: isMobile ? "x mandatory" : undefined,
+            }}
+          >
+            {psychosocialFactors.map((factor, index) => (
+              <article
+                key={factor.title}
+                style={{
+                  padding: isMobile ? "15px 14px 16px" : "16px 16px 18px",
+                  border: "1px solid rgba(0,182,157,.18)",
+                  borderRadius: 14,
+                  background: "linear-gradient(135deg, rgba(255,255,255,1), rgba(240,252,249,1))",
+                  boxShadow: "0 6px 18px rgba(0,0,0,.04)",
+                  minHeight: isMobile ? 0 : 184,
+                  display: "flex",
+                  flexDirection: "column",
+                  minWidth: isMobile ? "84vw" : undefined,
+                  maxWidth: isMobile ? "84vw" : undefined,
+                  flexShrink: isMobile ? 0 : undefined,
+                  scrollSnapAlign: isMobile ? "start" : undefined,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: isMobile ? "flex-start" : "space-between",
+                    flexWrap: "wrap",
+                    gap: 8,
+                    marginBottom: 8,
+                  }}
+                >
+                  <div
+                    style={{
+                      minWidth: isMobile ? 28 : 26,
+                      height: isMobile ? 28 : 26,
+                      borderRadius: 999,
+                      background: "linear-gradient(135deg,#00B69D,#03D4BA)",
+                      color: "#fff",
+                      fontSize: isMobile ? ".7rem" : ".67rem",
+                      fontWeight: 800,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      letterSpacing: ".02em",
+                      padding: "0 7px",
+                    }}
+                  >
+                    {index + 1}
+                  </div>
+                  <span
+                    style={{
+                      fontSize: isMobile ? ".58rem" : ".56rem",
+                      fontWeight: 700,
+                      color: "#008C79",
+                      textTransform: "uppercase",
+                      letterSpacing: ".08em",
+                      background: "rgba(0,182,157,.12)",
+                      border: "1px solid rgba(0,182,157,.2)",
+                      borderRadius: 999,
+                      padding: "3px 8px",
+                    }}
+                  >
+                    {isMobile ? "Fator" : "Fator Psicossocial"}
+                  </span>
+                </div>
+                <h4
+                  style={{
+                    fontFamily: "'Merriweather', serif",
+                    fontSize: isMobile ? "1rem" : ".98rem",
+                    color: "#1A1A1A",
+                    marginBottom: 7,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {factor.title}
+                </h4>
+                <p style={{ fontSize: isMobile ? ".79rem" : ".74rem", lineHeight: 1.62, color: "#4D5D59", margin: 0 }}>{factor.desc}</p>
+              </article>
+            ))}
+          </div>
+
+          <div
+            style={{
+              padding: isMobile ? "16px 16px 18px" : "20px 24px 22px",
+              background: "linear-gradient(135deg,#00302A,#004538)",
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "'Merriweather', serif",
+                fontStyle: "italic",
+                color: "#fff",
+                fontSize: isMobile ? ".9rem" : "1rem",
+                lineHeight: 1.65,
+                margin: 0,
+              }}
+            >
+              &quot;Cultura do Cuidado é Inteligência de Dados.&quot; Mapear os 13 Riscos Psicossociais não é apenas
+              uma escolha humanizada; é a Blindagem Jurídica que sua empresa precisa para sustentar a NR-1 e evitar as
+              inconsistências fiscais do eSocial. Onde existe cuidado, não existe prejuízo invisível.
+            </p>
           </div>
         </div>
 

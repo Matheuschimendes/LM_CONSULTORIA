@@ -23,21 +23,21 @@ export function HeroSection() {
         <div>
 
           <div className="hero-badge">
-            <span className="pulse-dot" /> NR-01 - ISO 45003 - Validado MTE
+            <span className="pulse-dot" /> Conformidade NR-1 • Harmonia com diretrizes do Ministério do Trabalho
           </div>
           <h1 className="hero-h1">
-            Liane Milhomem:
+            Conformidade em NR-1:
             <br />
-            <em>Implementação Estratégica</em>
-            <br />da NR-01
+            <em>A Base da sua Segurança Jurídica.</em>
           </h1>
           <p className="hero-sub">
-            LM Consultoria - Inteligência Psicossocial & Performance. Maximize a performance da sua operação com um
-            Diagnóstico Validado pelo MTE e alinhado aos padrões globais da ISO 45003.
+            Implementamos o Gerenciamento de Riscos Ocupacionais com foco em Cultura do Cuidado. Garantimos que o seu
+            PGR seja tecnicamente inquestionável e esteja em total harmonia com as diretrizes do Ministério do
+            Trabalho.
           </p>
           <div className="hero-cta-wrap">
             <a href={WA_DIAG} className="btn-cta" target="_blank" rel="noreferrer">
-              <WhatsIcon /> Solicitar Diagnóstico de Performance - 15 min
+              <WhatsIcon /> Solicitar Mapeamento de Riscos NR-1
             </a>
             <div className="hero-trust">
               <span className="trust-i">Sigilo garantido</span>

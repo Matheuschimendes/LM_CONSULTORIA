@@ -43,8 +43,8 @@ export function FooterSection() {
       <div className="sec-inner footer-wrap">
         <div className="footer-hero">
           <div>
-            <p className="footer-kicker">Atendimento nacional</p>
-            <h3 className="footer-hero-title">Estruture seu plano psicossocial com segurança técnica.</h3>
+            <p className="footer-kicker">Autoridade Técnica • Atendimento nacional</p>
+            <h3 className="footer-hero-title">Liane Oliveira Milhomem Maranhão</h3>
           </div>
           <a href={WA_START} className="footer-hero-btn" target="_blank" rel="noreferrer">
             <span className="footer-hero-icn">
@@ -57,8 +57,8 @@ export function FooterSection() {
         <div className="footer-grid">
           <section className="footer-card footer-card--brand">
             <img src="/logo.svg" alt="LM Consultoria" className="footer-logo" loading="lazy" />
-            <p className="footer-brand-text">Inteligência Psicossocial e Performance para empresas em todo o Brasil.</p>
-            <p className="footer-brand-meta">Diagnóstico digital, plano de ação e implantação orientada.</p>
+            <p className="footer-brand-text">Psicóloga CRP 22/02023 | Pedagoga</p>
+            <p className="footer-brand-meta">Segurança Jurídica através da Cultura do Cuidado.</p>
           </section>
 
           <section className="footer-card">
